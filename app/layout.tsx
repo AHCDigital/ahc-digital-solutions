@@ -67,11 +67,6 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/apple-icon.svg",
-  },
 };
 
 export const viewport: Viewport = {
@@ -86,6 +81,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "AHC Digital Solutions",
   url: siteUrl,
+  logo: `${siteUrl}/ahc-master-logo.png`,
   description:
     "Özel yazılım, Android uygulamaları, web teknolojileri, yönetim sistemleri ve Google SEO çözümleri geliştiren teknoloji markası.",
   areaServed: {
