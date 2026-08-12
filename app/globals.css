@@ -865,3 +865,133 @@ html{scroll-behavior:smooth}
   .contactSideModule{align-items:flex-start;flex-direction:column}
   .contactSideModule>i{width:1px;height:16px;min-width:1px;flex:none;background:linear-gradient(180deg,rgba(53,230,242,.28),rgba(138,92,255,.20))}
 }
+
+
+/* ===== V10.5 — İLETİŞİM HİYERARŞİ / OKUNAKLILIK ===== */
+.contactV105{
+  grid-template-columns:minmax(420px,.92fr) minmax(520px,1.08fr);
+  gap:76px;
+  align-items:center;
+}
+.contactCopyV105{
+  max-width:620px;
+}
+.contactCopyV105 h2{
+  font-size:clamp(58px,5.6vw,86px);
+}
+.contactCopyV105>p:last-of-type{
+  max-width:570px;
+  color:#9aabc1;
+  font-size:13px;
+  line-height:1.9;
+}
+.contactTrust{
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:1fr 44px 1fr;
+  align-items:center;
+  gap:14px;
+  max-width:560px;
+}
+.contactTrust>div{
+  min-width:0;
+  padding:15px 16px;
+  border:1px solid rgba(91,178,244,.10);
+  border-radius:12px;
+  background:rgba(5,11,22,.34);
+}
+.contactTrust span{
+  display:block;
+  margin-bottom:9px;
+  color:#54dbe8;
+  font-family:"SFMono-Regular",Consolas,monospace;
+  font-size:7px;
+  letter-spacing:.14em;
+}
+.contactTrust strong{
+  display:block;
+  color:#b9cbe0;
+  font-size:10px;
+  font-weight:520;
+}
+.contactTrust small{
+  display:block;
+  margin-top:5px;
+  color:#5f728e;
+  font-size:8px;
+  line-height:1.5;
+}
+.contactTrust>i{
+  height:1px;
+  background:linear-gradient(90deg,rgba(53,230,242,.26),rgba(138,92,255,.24));
+}
+
+.contactTerminalV105{
+  overflow:hidden;
+  max-width:none;
+}
+.contactTerminalIntroV105{
+  min-height:132px;
+  padding:29px 30px 23px;
+}
+.contactTerminalIntroV105 strong{
+  font-size:clamp(25px,2.3vw,36px);
+}
+.contactTerminalIntroV105 small{
+  color:#7187a5;
+}
+.contactTerminalV105 .terminalPromptLine textarea{
+  color:#eef7ff;
+}
+.contactTerminalV105 .terminalPromptLine textarea::placeholder{
+  color:#c8d5e5;
+  opacity:.82;
+}
+.contactTerminalV105 .terminalPromptLine textarea:focus::placeholder{
+  opacity:.38;
+}
+.contactTerminalV105 .terminalCaret,
+.contactTerminalV105 .contactCaret{
+  display:none!important;
+}
+.contactTerminalV105 .terminalPromptLine{
+  min-height:220px;
+}
+.contactTerminalV105 .terminalFormBottom{
+  min-height:70px;
+}
+
+@media(max-width:980px){
+  .contactV105{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+  .contactCopyV105{
+    max-width:760px;
+  }
+  .contactTerminalV105{
+    width:100%;
+  }
+}
+
+@media(max-width:600px){
+  .contactV105{
+    gap:38px;
+  }
+  .contactCopyV105 h2{
+    font-size:clamp(46px,13vw,58px);
+  }
+  .contactTrust{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .contactTrust>i{
+    width:1px;
+    height:12px;
+    margin-left:18px;
+    background:linear-gradient(180deg,rgba(53,230,242,.26),rgba(138,92,255,.24));
+  }
+  .contactTerminalIntroV105{
+    padding:25px 19px 20px;
+  }
+}

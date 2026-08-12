@@ -32,8 +32,7 @@ export default function ContactTerminalForm() {
           rows={5}
           aria-label="Projenizi anlatın"
         />
-        <span className="terminalCaret" aria-hidden="true">_</span>
-      </div>
+</div>
 
       <div className="terminalFormBottom">
         <div className="terminalMeta">
