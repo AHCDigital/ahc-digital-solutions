@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AHC Digital Solutions — Premium Overhaul V1
 
-## Getting Started
+Bu paket, kullanıcının gönderdiği güncel Next.js projesi baz alınarak hazırlanmıştır.
 
-First, run the development server:
+## Değiştirilenler
+- Tam ekran 2K Hailuo hero videosu entegre edildi ve web için optimize edildi.
+- Navbar ve logo kullanımı yeniden tasarlandı. Orijinal siyah arka planlı logo, koyu navbar üzerinde `mix-blend-mode: screen` ile yamalı görünmeden kullanılıyor.
+- Tüm ana sayfa görsel dili sıfırdan yenilendi.
+- Türkçe hero, hizmetler, projeler, yaklaşım ve iletişim bölümleri oluşturuldu.
+- Mobil ve tablet responsive düzenleri eklendi.
+- Next.js static export / Cloudflare Pages yapısı korundu.
+- `.next`, `node_modules`, `out` gibi üretilmiş klasörler pakete dahil edilmedi.
 
-```bash
+## Kurulum
+1. Mevcut proje klasörünün bir yedeğini alın.
+2. Bu ZIP içeriğini `C:\Users\AHC\Desktop\ahc-digital-solutions` klasörüne kopyalayın.
+3. PowerShell:
+
+```powershell
+cd $HOME\Desktop\ahc-digital-solutions
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Yerelde kontrol edin: `http://localhost:3000`
+5. Beğenilirse:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```powershell
+git add .
+git commit -m "Premium UI overhaul V1"
+git push
+```

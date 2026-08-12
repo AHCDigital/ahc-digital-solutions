@@ -1,0 +1,18 @@
+AHC Digital Solutions — Canlı Taslak V2
+
+1. ZIP'i açın.
+2. İçindeki app ve public klasörlerini şu klasörün içine kopyalayın:
+   C:\Users\AHC\Desktop\ahc-digital-solutions
+3. Windows sorarsa dosyaları değiştirin.
+4. PowerShell:
+
+cd $HOME\Desktop\ahc-digital-solutions
+npm run dev
+
+5. localhost kontrolünden sonra:
+
+git add .
+git commit -m "Add AHC Digital Solutions live visual V2"
+git push
+
+Gerçek kullanıcı logosu ve gönderilen tanıtım videosu public klasörüne eklenmiştir.
