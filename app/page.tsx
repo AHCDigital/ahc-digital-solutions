@@ -76,6 +76,7 @@ export default function Home() {
   return <main><MotionSystem />
     <header className="navShell">
       <nav>
+        <a href="#anasayfa">Anasayfa</a>
         <a href="#hizmetler">Hizmetler</a>
         <a href="#projeler">Projeler</a>
         <a href="#teknoloji">Teknoloji</a>
@@ -89,7 +90,6 @@ export default function Home() {
         <source src="/ahc-hero.mp4" type="video/mp4" />
       </video>
       <div className="heroTopFade"/><div className="heroBottomFade"/><div className="heroEdge"/>
-      <div className="heroBadge"><span/> YAZILIM · MOBİL · WEB · DİJİTAL DÖNÜŞÜM</div>
       <a className="scrollCue" href="#hizmetler"><small>KEŞFET</small><span>↓</span></a>
     </section>
 
@@ -126,7 +126,6 @@ export default function Home() {
           {capabilities.map((item) =>
             <article className="capabilityItem" key={item.no}>
               <div className="capabilityTop">
-                <span>{item.no}</span>
                 <code>{item.code}</code>
                 <i/>
               </div>
@@ -157,10 +156,9 @@ export default function Home() {
       </div>
 
       <div className="projectShowcase">
-        {projects.map((p, idx) =>
+        {projects.map((p) =>
           <article className="projectPortrait" key={p.title}>
             <div className="projectPortraitHead">
-              <span>0{idx + 1}</span>
               <h3>{p.title}</h3>
               <i/>
             </div>
@@ -202,10 +200,6 @@ export default function Home() {
         </div>
 
         <div className="editorBody">
-          <div className="lineNumbers">
-            {Array.from({length: 16}, (_, i) => <span key={i}>{String(i + 1).padStart(2, "0")}</span>)}
-          </div>
-
           <div className="codeContent" aria-hidden="true">
             <p><b className="pink">const</b> <b className="cyan">AHCWorkflow</b> = <span>{"{"}</span></p>
             <p className="indent"><b className="blue">client</b>: <span className="string">"fikrinizi"</span>,</p>
@@ -237,7 +231,6 @@ export default function Home() {
           {processSteps.map((step, idx) =>
             <article className="pipelineStep" key={step.no}>
               <div className="pipelineNode">
-                <span>{step.no}</span>
                 <i/>
               </div>
               <div className="pipelineCard">
@@ -266,13 +259,11 @@ export default function Home() {
 
         <div className="contactTrust">
           <div>
-            <span>01</span>
             <strong>Fikrinizi anlatın</strong>
             <small>Kısa bir mesaj yeterli.</small>
           </div>
           <i/>
           <div>
-            <span>02</span>
             <strong>Doğrudan görüşelim</strong>
             <small>Mesajınız WhatsApp'a taşınır.</small>
           </div>

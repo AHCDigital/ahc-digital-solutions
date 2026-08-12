@@ -1026,3 +1026,95 @@ html{scroll-behavior:smooth}
     color:#ffffff!important;
   }
 }
+
+
+/* ===== V10.7 — KULLANICI İSTEKLERİ / OKUNAKLILIK & NAV POLISH ===== */
+/* Dekoratif numaralar kaldırıldıktan sonra hizalamaları koru */
+.capabilityTop{grid-template-columns:1fr auto}
+.projectPortraitHead{grid-template-columns:1fr auto}
+.editorBody{grid-template-columns:1fr;padding-left:24px}
+.codeContent{padding-left:0}
+.pipelineNode{justify-content:flex-start}
+.contactTrust strong{margin-top:0}
+
+/* Küçük/soluk açıklama metinleri: daha beyaz ve çok hafif daha büyük */
+.kicker,
+.scrollCue,
+.manifestoCode,
+.consoleBar,
+.consoleBar b,
+.statementLead,
+.techRail,
+.aboutManifesto p,
+.capabilityTop code,
+.capabilityItem p,
+.customProjectCode small,
+.customProjectCode strong,
+.customProject p,
+.customProject a,
+.processIntro>p:last-child,
+.editorPath,
+.editorState,
+.codeContent,
+.runtimePanel>small,
+.runtimePanel span,
+.pipelineCard small,
+.pipelineCard p,
+.contactCopy>p:last-of-type,
+.contactCopyV105>p:last-of-type,
+.contactTrust strong,
+.contactTrust small,
+.contactTerminalTop,
+.contactTerminalIntro small,
+.terminalMeta,
+.footerBrand span,
+.footerNav a,
+.footerTop,
+.footerBottom{
+  color:rgba(247,250,255,.92)!important;
+}
+.kicker{font-size:11px}
+.scrollCue small{font-size:9px}
+.statementLead{font-size:15px}
+.techRail{font-size:9px}
+.aboutManifesto p{font-size:14px}
+.aboutManifesto p:first-of-type{font-size:16px}
+.capabilityTop code{font-size:9px}
+.capabilityItem p{font-size:12px}
+.customProjectCode small{font-size:8px}
+.customProjectCode strong{font-size:13px}
+.customProject p{font-size:12px}
+.customProject a{font-size:9px}
+.processIntro>p:last-child{font-size:14px}
+.editorPath{font-size:10px}
+.editorState{font-size:9px}
+.pipelineCard small{font-size:8px}
+.pipelineCard p{font-size:11px}
+.contactCopyV105>p:last-of-type{font-size:14px}
+.contactTrust strong{font-size:11px}
+.contactTrust small{font-size:9px}
+.contactTerminalTop{font-size:9px}
+.contactTerminalIntro small{font-size:9px}
+.terminalMeta{font-size:8px}
+.footerBrand span{font-size:8px}
+.footerNav a,.footerTop{font-size:9px}
+.footerBottom{font-size:8px}
+
+/* Mesaj alanı boşken tıklanabilir/yazılabilir olduğunu anlatan görünür caret */
+.terminalPromptLine textarea{padding-left:14px}
+.terminalCaretHint{
+  position:absolute;
+  z-index:3;
+  left:82px;
+  top:35px;
+  color:var(--cyan);
+  font-family:"SFMono-Regular",Consolas,monospace;
+  font-size:15px;
+  line-height:1.7;
+  text-shadow:0 0 11px rgba(53,230,242,.55);
+  animation:blink 1s steps(1) infinite;
+  pointer-events:none;
+}
+@media(max-width:600px){
+  .terminalCaretHint{left:69px;top:31px;font-size:13px}
+}

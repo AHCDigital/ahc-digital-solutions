@@ -7,6 +7,7 @@ const PREFIX = "Merhaba, AHC Digital Solutions web sitenizden yazıyorum.";
 
 export default function ContactTerminalForm() {
   const [message, setMessage] = useState("");
+  const [focused, setFocused] = useState(false);
   const max = 420;
 
   const remaining = useMemo(() => max - message.length, [message]);
@@ -25,8 +26,11 @@ export default function ContactTerminalForm() {
     <form className="terminalForm" onSubmit={submit}>
       <div className="terminalPromptLine">
         <span className="terminalPromptLabel">AHC&gt;</span>
+        {!message && !focused && <span className="terminalCaretHint" aria-hidden="true">▌</span>}
         <textarea
           value={message}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
           onChange={(e) => setMessage(e.target.value.slice(0, max))}
           placeholder="Projenizi birkaç cümleyle anlatın..."
           rows={5}
