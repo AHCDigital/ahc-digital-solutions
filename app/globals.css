@@ -995,3 +995,34 @@ html{scroll-behavior:smooth}
     padding:25px 19px 20px;
   }
 }
+
+
+/* ===== V10.6 — NAVBAR OKUNAKLILIK POLISH ===== */
+.navShell nav a{
+  color:rgba(244,249,255,.92)!important;
+  font-weight:520;
+  text-shadow:0 0 10px rgba(53,230,242,.08);
+}
+.navShell nav a:hover{
+  color:#ffffff!important;
+  text-shadow:0 0 14px rgba(53,230,242,.22);
+}
+.navCta{
+  color:#f6fbff!important;
+  font-weight:560;
+  border-color:rgba(82,213,237,.34)!important;
+  text-shadow:0 0 10px rgba(53,230,242,.10);
+}
+.navCta:hover{
+  color:#ffffff!important;
+  border-color:rgba(97,225,244,.48)!important;
+  text-shadow:0 0 16px rgba(53,230,242,.26);
+}
+@media(max-width:900px){
+  .navShell nav a{
+    color:rgba(247,251,255,.94)!important;
+  }
+  .navCta{
+    color:#ffffff!important;
+  }
+}
