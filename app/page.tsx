@@ -1,3 +1,4 @@
+import ContactTerminalForm from "./ContactTerminalForm";
 import MotionSystem from "./MotionSystem";
 
 const capabilities = [
@@ -255,15 +256,23 @@ export default function Home() {
       <div className="contactGrid"/><div className="contactGlow"/>
       <div className="contactTerminal">
         <div className="contactTerminalTop"><span>ahc://iletisim/yeni_proje</span><i>● BAĞLANTI AÇIK</i></div>
-        <div className="contactTerminalBody"><span className="terminalPrompt">AHC&gt;</span><strong>Projenizi konuşalım<span className="contactCaret">_</span></strong></div>
+        <div className="contactTerminalIntro">
+          <span className="terminalPrompt">AHC&gt;</span>
+          <strong>Projenizi konuşalım<span className="contactCaret">_</span></strong>
+          <small>// mesajınızı aşağıdaki terminal alanına yazın</small>
+        </div>
+        <ContactTerminalForm />
       </div>
       <div className="contactCopy">
         <p className="kicker"><span/> İLETİŞİM</p>
         <h2>Aklınızdaki projeyi<br/><em>bize anlatın.</em></h2>
         <p>Yeni bir ürün, mevcut sisteminiz için özel bir geliştirme ya da dijital tarafta çözmek istediğiniz bir ihtiyaç varsa ilk adımı bir görüşmeyle atalım.</p>
-        <div className="contactActions">
-          <a className="primaryContact" href="mailto:info@ahcdigitalsolutions.com">E-POSTA GÖNDERİN <span>↗</span></a>
-          <span className="contactMail">info@ahcdigitalsolutions.com</span>
+        <div className="contactSideModule">
+          <div><span>01</span><b>Mesajınızı yazın</b></div>
+          <i/>
+          <div><span>02</span><b>WhatsApp'a aktarın</b></div>
+          <i/>
+          <div><span>03</span><b>Görüşmeyi başlatın</b></div>
         </div>
       </div>
     </section>

@@ -627,3 +627,241 @@ html{scroll-behavior:smooth}
     transform:none;
   }
 }
+
+/* V10.3 — WhatsApp iletişim CTA */
+.whatsappContact{
+  position:relative;
+  isolation:isolate;
+  min-width:245px;
+  justify-content:center;
+  gap:14px;
+  overflow:hidden;
+  border-color:rgba(69,207,235,.28);
+  background:linear-gradient(135deg,rgba(39,193,220,.12),rgba(110,73,224,.10)),rgba(5,12,24,.62);
+  box-shadow:inset 0 1px rgba(255,255,255,.035),0 14px 36px rgba(27,164,198,.075);
+}
+.whatsappContact:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-1px;
+  opacity:0;
+  background:linear-gradient(110deg,rgba(53,230,242,.12),rgba(138,92,255,.12),rgba(53,230,242,.04));
+  transition:opacity .28s ease;
+}
+.whatsappContact:hover:before{opacity:1}
+.whatsappContact:hover{
+  border-color:rgba(87,222,241,.42);
+  box-shadow:0 18px 46px rgba(28,163,202,.12),0 0 36px rgba(112,76,226,.055),inset 0 1px rgba(255,255,255,.055);
+}
+.whatsappIcon{
+  width:19px;
+  height:19px;
+  flex:0 0 auto;
+  fill:#7be4ee;
+  filter:drop-shadow(0 0 8px rgba(53,230,242,.28));
+}
+@media(max-width:600px){
+  .whatsappContact{width:100%;min-width:0}
+}
+
+
+/* ===== V10.4 — TERMINAL WHATSAPP DENEYİMİ ===== */
+.contactV7{grid-template-columns:minmax(460px,1.08fr) minmax(360px,.92fr)}
+.contactTerminal{overflow:visible}
+.contactTerminalIntro{
+  position:relative;
+  min-height:155px;
+  padding:34px 34px 26px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  column-gap:14px;
+  row-gap:10px;
+  align-items:start;
+  border-bottom:1px solid rgba(90,171,245,.08);
+  background:
+    radial-gradient(circle at 18% 25%,rgba(53,230,242,.055),transparent 18rem),
+    linear-gradient(145deg,rgba(8,21,39,.34),rgba(4,7,16,.13));
+  font-family:"SFMono-Regular",Consolas,monospace;
+}
+.contactTerminalIntro .terminalPrompt{padding-top:7px}
+.contactTerminalIntro strong{
+  color:#dcecff;
+  font-size:clamp(25px,2.5vw,39px);
+  line-height:1.2;
+  font-weight:400;
+  letter-spacing:-.035em;
+}
+.contactTerminalIntro small{
+  grid-column:2;
+  color:#526782;
+  font-size:8px;
+  line-height:1.7;
+  letter-spacing:.05em;
+}
+.terminalForm{
+  position:relative;
+  margin:0;
+  padding:0;
+  background:rgba(2,6,14,.42);
+}
+.terminalForm:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(61,152,255,.026) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(61,152,255,.026) 1px,transparent 1px);
+  background-size:28px 28px;
+  mask-image:linear-gradient(to bottom,black,transparent 92%);
+}
+.terminalPromptLine{
+  position:relative;
+  min-height:235px;
+  padding:28px 32px 24px;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  align-items:start;
+  gap:12px;
+}
+.terminalPromptLabel{
+  padding-top:7px;
+  color:var(--cyan);
+  font-family:"SFMono-Regular",Consolas,monospace;
+  font-size:11px;
+  text-shadow:0 0 12px rgba(53,230,242,.35);
+}
+.terminalPromptLine textarea{
+  position:relative;
+  z-index:2;
+  width:100%;
+  min-height:150px;
+  resize:none;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:#c8d9ed;
+  caret-color:var(--cyan);
+  font-family:"SFMono-Regular",Consolas,monospace;
+  font-size:14px;
+  line-height:1.7;
+  letter-spacing:.01em;
+}
+.terminalPromptLine textarea::placeholder{color:#40516d}
+.terminalCaret{
+  position:absolute;
+  z-index:1;
+  left:82px;
+  top:36px;
+  color:rgba(53,230,242,.18);
+  font-family:"SFMono-Regular",Consolas,monospace;
+  animation:blink 1s steps(1) infinite;
+  pointer-events:none;
+}
+.terminalFormBottom{
+  position:relative;
+  z-index:2;
+  min-height:72px;
+  padding:12px 16px 12px 23px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  border-top:1px solid rgba(90,171,245,.08);
+  background:rgba(3,8,17,.72);
+}
+.terminalMeta{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  color:#50627d;
+  font-family:"SFMono-Regular",Consolas,monospace;
+  font-size:7px;
+  letter-spacing:.08em;
+}
+.terminalStatus{display:flex;align-items:center;gap:8px;color:#5f8496}
+.terminalStatus i{
+  width:6px;height:6px;border-radius:50%;background:var(--cyan);
+  box-shadow:0 0 13px rgba(53,230,242,.7);
+  animation:systemPulse 2.3s ease-in-out infinite;
+}
+.terminalSend{
+  min-height:44px;
+  padding:0 16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  border:1px solid rgba(69,207,235,.26);
+  border-radius:9px;
+  color:#cbe9f4;
+  background:
+    linear-gradient(135deg,rgba(39,193,220,.11),rgba(110,73,224,.10)),
+    rgba(5,12,24,.68);
+  font-size:8px;
+  letter-spacing:.13em;
+  cursor:pointer;
+  transition:.28s ease;
+}
+.terminalSend:hover:not(:disabled){
+  transform:translateY(-2px);
+  border-color:rgba(87,222,241,.44);
+  box-shadow:0 13px 32px rgba(28,163,202,.10),0 0 28px rgba(112,76,226,.05);
+}
+.terminalSend:disabled{
+  opacity:.34;
+  cursor:not-allowed;
+}
+.terminalSend>span{color:var(--cyan);font-size:13px}
+.terminalWaIcon{
+  width:16px;height:16px;fill:#7be4ee;
+  filter:drop-shadow(0 0 7px rgba(53,230,242,.25));
+}
+.contactSideModule{
+  margin-top:30px;
+  padding:20px 22px;
+  display:flex;
+  align-items:center;
+  gap:13px;
+  border:1px solid rgba(86,170,244,.10);
+  border-radius:13px;
+  background:rgba(4,9,19,.36);
+}
+.contactSideModule div{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.contactSideModule span{
+  color:#4f6687;
+  font-family:"SFMono-Regular",Consolas,monospace;
+  font-size:7px;
+}
+.contactSideModule b{
+  color:#7e90a9;
+  font-size:9px;
+  font-weight:500;
+  white-space:nowrap;
+}
+.contactSideModule>i{
+  flex:1;
+  height:1px;
+  min-width:18px;
+  background:linear-gradient(90deg,rgba(53,230,242,.28),rgba(138,92,255,.20));
+}
+@media(max-width:900px){
+  .contactV7{grid-template-columns:1fr}
+  .contactTerminal{max-width:none}
+}
+@media(max-width:600px){
+  .contactTerminalIntro{padding:28px 20px 22px}
+  .contactTerminalIntro small{grid-column:1/-1}
+  .terminalPromptLine{min-height:220px;padding:24px 19px 20px;grid-template-columns:auto minmax(0,1fr)}
+  .terminalPromptLine textarea{min-height:145px;font-size:12px}
+  .terminalFormBottom{align-items:stretch;flex-direction:column;padding:14px 16px}
+  .terminalMeta{justify-content:space-between;width:100%}
+  .terminalSend{width:100%;min-height:46px}
+  .contactSideModule{align-items:flex-start;flex-direction:column}
+  .contactSideModule>i{width:1px;height:16px;min-width:1px;flex:none;background:linear-gradient(180deg,rgba(53,230,242,.28),rgba(138,92,255,.20))}
+}
