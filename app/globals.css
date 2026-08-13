@@ -1434,3 +1434,15 @@ html{scroll-behavior:smooth}
   .serviceVisualParticles i,
   .masterReferenceImage{animation:none!important;}
 }
+
+/* V31 — hero-first mobile media scheduling. Service artwork is not requested
+   until the showcase approaches the viewport; this keeps initial video decode
+   and network bandwidth reserved for the hero on mobile. */
+.masterReferencePlaceholder{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 72% 38%,rgba(94,73,255,.15),transparent 27%),
+    radial-gradient(circle at 35% 62%,rgba(29,188,255,.10),transparent 32%),
+    linear-gradient(135deg,rgba(6,11,24,.92),rgba(10,8,25,.96));
+}

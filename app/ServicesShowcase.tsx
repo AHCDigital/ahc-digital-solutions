@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type Category = "all" | "software" | "web" | "infra" | "seo" | "service";
 type ServiceCategory = Exclude<Category, "all">;
@@ -57,7 +57,7 @@ const services: Service[] = [
     short: "Tekrarlayan işleri otomatikleştirerek zaman ve operasyon maliyeti kazandırın.",
     category: "software",
     variant: "automation",
-    image: "/service-master-exact/automation-approved.png",
+    image: "/service-master-exact/automation-approved.webp",
     slug: "is-surecleri-otomasyonu",
     features: ["Akıllı İş Akışları", "Zaman Tasarrufu", "Veri Senkronizasyonu", "Otomatik Bildirimler"],
   },
@@ -66,7 +66,7 @@ const services: Service[] = [
     short: "Doğru teknoloji, altyapı ve platform kararları için teknik yol haritası.",
     category: "infra",
     variant: "platform",
-    image: "/service-master-exact/platform-approved.png",
+    image: "/service-master-exact/platform-approved.webp",
     slug: "platform-danismanligi",
     features: ["Teknoloji Seçimi", "Altyapı Planlama", "Ölçeklenebilirlik", "Güvenlik & Uyumluluk"],
   },
@@ -75,7 +75,7 @@ const services: Service[] = [
     short: "Verilerinizin doğruluğunu, tutarlılığını ve kullanılabilirliğini artırın.",
     category: "infra",
     variant: "data",
-    image: "/service-master-exact/data-approved.png",
+    image: "/service-master-exact/data-approved.webp",
     slug: "veri-kalitesi-yonetimi",
     features: ["Veri Doğrulama", "Tutarlılık Kontrolü", "Kalite İzleme", "Raporlama"],
   },
@@ -84,7 +84,7 @@ const services: Service[] = [
     short: "Markanızı dijitalde güçlü temsil eden modern kurumsal web deneyimi.",
     category: "web",
     variant: "corporate",
-    image: "/service-master-exact/corporate-approved.png",
+    image: "/service-master-exact/corporate-approved.webp",
     slug: "kurumsal-web-sitesi",
     features: ["Kurumsal Tasarım", "Responsive Yapı", "SEO Uyumlu Altyapı", "Teknik Destek"],
   },
@@ -93,7 +93,7 @@ const services: Service[] = [
     short: "Markanıza özgü, kullanıcı odaklı ve dönüşüm hedefli arayüz tasarımı.",
     category: "web",
     variant: "design",
-    image: "/service-master-exact/design-approved.png",
+    image: "/service-master-exact/design-approved.webp",
     slug: "web-sitesi-tasarimi",
     features: ["Özgün Tasarım", "Kullanıcı Odaklı", "Görsel Hikâye", "Dönüşüm Odaklı"],
   },
@@ -102,7 +102,7 @@ const services: Service[] = [
     short: "Kullanıcı davranışına göre şekillenen modern ürün ve arayüz deneyimleri.",
     category: "web",
     variant: "uiux",
-    image: "/service-master-exact/uiux-approved.png",
+    image: "/service-master-exact/uiux-approved.webp",
     slug: "ui-ux-tasarimi",
     features: ["Kullanıcı Araştırması", "Wireframe", "Prototipleme", "Arayüz Tasarımı"],
   },
@@ -111,7 +111,7 @@ const services: Service[] = [
     short: "Daha hızlı yüklenen, daha akıcı ve Core Web Vitals odaklı yapı.",
     category: "web",
     variant: "speed",
-    image: "/service-master-exact/speed-approved.png",
+    image: "/service-master-exact/speed-approved.webp",
     slug: "web-sitesi-performans-optimizasyonu",
     features: ["Hız Analizi", "Core Web Vitals", "Önbellekleme", "Sürekli İzleme"],
   },
@@ -120,7 +120,7 @@ const services: Service[] = [
     short: "Kimlik doğrulama, veri, depolama ve bulut servislerini tek altyapıda birleştirin.",
     category: "infra",
     variant: "firebase",
-    image: "/service-master-exact/firebase-approved.png",
+    image: "/service-master-exact/firebase-approved.webp",
     slug: "firebase-entegrasyonu",
     features: ["Authentication", "Firestore", "Storage", "Cloud Functions"],
   },
@@ -129,7 +129,7 @@ const services: Service[] = [
     short: "Farklı sistemleri güvenli ve ölçeklenebilir veri akışlarıyla birbirine bağlayın.",
     category: "infra",
     variant: "api",
-    image: "/service-master-exact/api-approved.png",
+    image: "/service-master-exact/api-approved.webp",
     slug: "api-entegrasyonu",
     features: ["Sistem Entegrasyonu", "Veri Senkronizasyonu", "Güvenli İletişim", "İzleme & Kontrol"],
   },
@@ -138,7 +138,7 @@ const services: Service[] = [
     short: "Teknik, içerik ve performans odaklı çalışmalarla organik görünürlüğünüzü büyütün.",
     category: "seo",
     variant: "seo",
-    image: "/service-master-exact/seo-approved.png",
+    image: "/service-master-exact/seo-approved.webp",
     slug: "seo-calismalari",
     features: ["Anahtar Kelime", "İçerik SEO", "Rakip Analizi", "Raporlama"],
   },
@@ -147,7 +147,7 @@ const services: Service[] = [
     short: "Tarama, indeksleme, yapı, hız ve teknik sinyalleri arama motorları için güçlendirin.",
     category: "seo",
     variant: "techseo",
-    image: "/service-master-exact/techseo-approved.png",
+    image: "/service-master-exact/techseo-approved.webp",
     slug: "teknik-seo",
     features: ["Teknik Analiz", "Site Hızı", "Mobil Uyumluluk", "Yapısal Optimizasyon"],
   },
@@ -156,7 +156,7 @@ const services: Service[] = [
     short: "Telefon, tablet, bilgisayar ve elektronik cihazlar için profesyonel teknik servis.",
     category: "service",
     variant: "repair",
-    image: "/service-master-exact/repair-approved.png",
+    image: "/service-master-exact/repair-approved.webp",
     slug: "elektronik-telefon-tablet-bilgisayar-tamiri",
     features: ["Arıza Tespiti", "Profesyonel Onarım", "Parça Kontrolü", "Test & Teslim"],
   },
@@ -173,13 +173,35 @@ const filters: { key: Category; label: string }[] = [
 
 export default function ServicesShowcase() {
   const [active, setActive] = useState<Category>("all");
+  const [loadArtwork, setLoadArtwork] = useState(false);
+  const showcaseRef = useRef<HTMLDivElement>(null);
   const visible = useMemo(
     () => (active === "all" ? services : services.filter((service) => service.category === active)),
     [active],
   );
 
+  useEffect(() => {
+    const node = showcaseRef.current;
+    if (!node || loadArtwork) return;
+
+    // Homepage artwork is intentionally kept out of the initial network/decode queue.
+    // The hero video gets first priority on mobile; service visuals start only when
+    // the showcase is genuinely approaching the viewport.
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setLoadArtwork(true);
+        observer.disconnect();
+      },
+      { rootMargin: "240px 0px", threshold: 0 },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [loadArtwork]);
+
   return (
-    <div className="servicesShowcase servicesMasterFinal">
+    <div ref={showcaseRef} className="servicesShowcase servicesMasterFinal">
       <div className="servicesHeroRow">
         <div>
           <span className="servicesEyebrow">AHC DIGITAL / SERVICES</span>
@@ -223,7 +245,11 @@ export default function ServicesShowcase() {
             style={{ "--card-index": index } as React.CSSProperties}
           >
             <div className="masterServiceVisual" aria-hidden="true">
-              <img src={service.image} alt="" className="masterReferenceImage" loading="lazy" decoding="async" />
+              {loadArtwork ? (
+                <img src={service.image} alt="" className="masterReferenceImage" loading="lazy" decoding="async" />
+              ) : (
+                <div className="masterReferencePlaceholder" />
+              )}
               <div className="masterReferenceGlow" />
               <div className="masterReferenceScan" />
               <span className="masterReferenceSpark sparkOne" />
