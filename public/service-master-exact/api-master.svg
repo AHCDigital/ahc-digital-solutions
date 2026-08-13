@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice"><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020711"/><stop offset="0.52" stop-color="#061528"/><stop offset="1" stop-color="#110925"/></linearGradient>
+<linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16f2ff"/><stop offset="0.5" stop-color="#2f86ff"/><stop offset="1" stop-color="#b04cff"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#36e7ff" stop-opacity=".85"/><stop offset=".35" stop-color="#3a83ff" stop-opacity=".32"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+<filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+<filter id="shadow"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#2fe7ff" flood-opacity=".42"/></filter>
+<pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse"><path d="M46 0H0V46" fill="none" stroke="#1f8fd0" stroke-opacity=".075"/></pattern>
+</defs><rect width="1200" height="720" fill="url(#bg)"/><rect width="1200" height="720" fill="url(#grid)"/><ellipse cx="760" cy="360" rx="390" ry="290" fill="url(#glow)" opacity=".28" filter="url(#blur)"/>
+<g transform="translate(585 110)">
+ <g fill="#061426" stroke-width="3"><rect x="25" y="92" width="210" height="280" rx="34" stroke="#35e9ff"/><rect x="555" y="92" width="210" height="280" rx="34" stroke="#a04fff"/></g>
+ <g fill="none" stroke="url(#cyan)" stroke-width="7" filter="url(#shadow)"><path d="M235 176 C340 96 458 96 555 176"/><path d="M555 286 C450 366 340 366 235 286"/></g>
+ <g fill="#34eaff"><circle cx="322" cy="130" r="10"/><circle cx="400" cy="119" r="8"/><circle cx="482" cy="137" r="10"/></g><g fill="#b150ff"><circle cx="478" cy="330" r="10"/><circle cx="402" cy="347" r="8"/><circle cx="321" cy="330" r="10"/></g>
+ <g transform="translate(320 165)"><circle cx="75" cy="75" r="74" fill="#0a1830" stroke="#4feaff" stroke-width="3"/><circle cx="75" cy="75" r="45" fill="none" stroke="#8f55ff" stroke-width="3" stroke-dasharray="8 10"/><path d="M42 75h66M75 42v66" stroke="#d5fbff" stroke-width="4" opacity=".8"/></g>
+ <g opacity=".38" stroke="#3ae8ff"><path d="M70 150h120M70 195h90M70 240h120M590 150h120M590 195h90M590 240h120"/></g>
+</g>
+</svg>
