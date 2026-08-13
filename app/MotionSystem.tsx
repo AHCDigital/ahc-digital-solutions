@@ -13,7 +13,7 @@ export default function MotionSystem() {
     document.documentElement.classList.add("motion-ready");
 
     const revealTargets = document.querySelectorAll(
-      ".statement, .aboutHeader, .servicesShowcase, .projectOnlyTitle, .projectPortrait, .processIntro, .codeWorkspace, .contactTerminal, .contactCopy"
+      ".statement, .aboutHeader, .capabilityConsole, .projectOnlyTitle, .projectPortrait, .processIntro, .codeWorkspace, .contactTerminal, .contactCopy"
     );
 
     revealTargets.forEach((el, index) => {
@@ -35,7 +35,7 @@ export default function MotionSystem() {
 
     revealTargets.forEach((el) => observer.observe(el));
 
-    const hoverCards = document.querySelectorAll(".serviceCard, .pipelineCard, .portraitFrame");
+    const hoverCards = document.querySelectorAll(".capabilityItem, .pipelineCard, .portraitFrame");
     const onMove = (event: Event) => {
       const e = event as MouseEvent;
       const el = e.currentTarget as HTMLElement;

@@ -1,6 +1,44 @@
 import ContactTerminalForm from "./ContactTerminalForm";
 import MotionSystem from "./MotionSystem";
-import ServicesShowcase from "./ServicesShowcase";
+
+const capabilities = [
+  {
+    no: "01",
+    title: "Özel Yazılım",
+    code: "build.for(yourBusiness)",
+    text: "Hazır kalıplara bağlı kalmadan, ihtiyacınıza göre şekillenen yazılım sistemleri geliştiriyoruz. Fikrinizi anlatın; kapsamını, kullanım senaryolarını ve doğru teknik yaklaşımı birlikte değerlendirelim.",
+  },
+  {
+    no: "02",
+    title: "Android Uygulamaları",
+    code: "android.create(nativeExperience)",
+    text: "Android cihazlar için hızlı, akıcı ve güçlü kullanıcı deneyimleri tasarlıyor; arayüzden uygulama mimarisine kadar ürünün tamamını geliştiriyoruz.",
+  },
+  {
+    no: "03",
+    title: "Web Tasarım & Geliştirme",
+    code: "web.launch(brandExperience)",
+    text: "Markanızın dijital kimliğini yansıtan modern kurumsal siteler, ürün sayfaları ve özel web deneyimleri tasarlıyor; performans ve mobil uyumluluğu merkeze alıyoruz.",
+  },
+  {
+    no: "04",
+    title: "Yönetim Panelleri",
+    code: "dashboard.control(business)",
+    text: "Operasyonunuzu tek noktadan yönetebileceğiniz özel admin panelleri, kullanıcı yönetimi, raporlama ekranları ve işletmenize özel kontrol sistemleri geliştiriyoruz.",
+  },
+  {
+    no: "05",
+    title: "Bulut & Sistem Entegrasyonları",
+    code: "systems.connect(securely)",
+    text: "Uygulama, web ve yönetim katmanlarını güvenli bir altyapıda bir araya getiriyor; veri akışlarını ve servis entegrasyonlarını projenin ihtiyaçlarına göre kurguluyoruz.",
+  },
+  {
+    no: "06",
+    title: "Google SEO",
+    code: "visibility.optimize(google)",
+    text: "Teknik SEO, sayfa yapısı, içerik mimarisi ve performans çalışmalarını bütüncül ele alarak markanızın Google aramalarındaki görünürlüğünü sürdürülebilir biçimde güçlendirmeyi hedefliyoruz.",
+  },
+];
 
 const projects = [
   { title: "AHC Location", video: "/ahc-location.mp4" },
@@ -39,9 +77,9 @@ export default function Home() {
     <header className="navShell">
       <nav>
         <a href="#anasayfa">Anasayfa</a>
-        <a href="#ahc-kimdir">AHC Kimdir?</a>
         <a href="#hizmetler">Hizmetler</a>
-        <a href="#projeler">Tamamlanan Projeler</a>
+        <a href="#projeler">Projeler</a>
+        <a href="#teknoloji">Teknoloji</a>
         <a href="#iletisim">İletişim</a>
       </nav>
       <a className="navCta" href="#iletisim">Projenizi Konuşalım <i>↗</i></a>
@@ -52,10 +90,18 @@ export default function Home() {
         <source src="/ahc-hero.mp4" type="video/mp4" />
       </video>
       <div className="heroTopFade"/><div className="heroBottomFade"/><div className="heroEdge"/>
-      <a className="scrollCue" href="#ahc-kimdir"><small>KEŞFET</small><span>↓</span></a>
+      <a className="scrollCue" href="#hizmetler"><small>KEŞFET</small><span>↓</span></a>
     </section>
 
-    <section className="aboutAHC" id="ahc-kimdir">
+    <section className="statement" id="teknoloji">
+      <div className="orbit orb1"/><div className="orbit orb2"/>
+      <p className="kicker"><span/> AHC DIGITAL SOLUTIONS</p>
+      <h1>Fikirleri <em>çalışan teknolojiye</em><br/>dönüştürüyoruz.</h1>
+      <p className="statementLead">Kod, tasarım ve sistem mühendisliğini tek bir deneyimde birleştiriyor; işletmeler için yalnızca görünen arayüzler değil, arkasında güçlü bir teknoloji çalışan dijital ürünler geliştiriyoruz.</p>
+      <div className="techRail"><span>ANDROID</span><i/> <span>WEB</span><i/> <span>BULUT</span><i/> <span>SEO</span><i/> <span>ÖZEL YAZILIM</span></div>
+    </section>
+
+    <section className="aboutAHC" id="hizmetler">
       <div className="aboutAura aboutAuraOne"/><div className="aboutAura aboutAuraTwo"/>
       <div className="aboutHeader">
         <div>
@@ -68,10 +114,39 @@ export default function Home() {
           <p>Tek bir hizmet alanına bağlı kalmadan, dijital bir ürünün ihtiyaç duyduğu farklı teknoloji katmanlarını aynı çatı altında ele alıyoruz.</p>
         </div>
       </div>
-    </section>
 
-    <section className="servicesSection" id="hizmetler">
-      <ServicesShowcase />
+      <div className="capabilityConsole">
+        <div className="consoleBar">
+          <div className="consoleDots"><i/><i/><i/></div>
+          <span>ahc://capabilities/business_solutions</span>
+          <b><i/> SİSTEM HAZIR</b>
+        </div>
+
+        <div className="capabilityGrid">
+          {capabilities.map((item) =>
+            <article className="capabilityItem" key={item.no}>
+              <div className="capabilityTop">
+                <code>{item.code}</code>
+                <i/>
+              </div>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          )}
+        </div>
+
+        <div className="customProject">
+          <div className="customProjectCode">
+            <small>PROJENİZ HAZIR BİR KATEGORİYE SIĞMIYORSA</small>
+            <strong>fikriniz <i>→</i> analiz <i>→</i> mimari <i>→</i> çalışan ürün</strong>
+          </div>
+          <div>
+            <h3>Fikrinizi anlatın.<br/><em>Birlikte şekillendirelim.</em></h3>
+            <p>Standart bir hizmet başlığına sığmayan dijital fikirler için de çalışıyoruz. İhtiyacınızı paylaşın; size özel geliştirilebilecek çözümü birlikte değerlendirelim.</p>
+            <a href="#iletisim">PROJENİZİ KONUŞALIM <span>↗</span></a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section className="projects projectsV5" id="projeler">
@@ -127,7 +202,7 @@ export default function Home() {
         <div className="editorBody">
           <div className="codeContent" aria-hidden="true">
             <p><b className="pink">const</b> <b className="cyan">AHCWorkflow</b> = <span>{"{"}</span></p>
-            <p className="indent"><b className="blue">client</b>: <span className="string">"fikriniz"</span>,</p>
+            <p className="indent"><b className="blue">client</b>: <span className="string">"fikrinizi"</span>,</p>
             <p className="indent"><b className="blue">objective</b>: <span className="string">"çalışan dijital ürün"</span>,</p>
             <p className="indent"><b className="blue">pipeline</b>: [</p>
             <p className="indent2"><span className="function">discover</span>(),</p>
@@ -182,6 +257,17 @@ export default function Home() {
           WhatsApp görüşmesine aktaralım.
         </p>
 
+        <div className="contactTrust">
+          <div>
+            <strong>Fikrinizi anlatın</strong>
+            <small>Kısa bir mesaj yeterli.</small>
+          </div>
+          <i/>
+          <div>
+            <strong>Doğrudan görüşelim</strong>
+            <small>Mesajınız WhatsApp'a taşınır.</small>
+          </div>
+        </div>
       </div>
 
       <div className="contactTerminal contactTerminalV105">
@@ -204,7 +290,7 @@ export default function Home() {
       <div className="footerMain">
         <div className="footerBrand"><strong>AHC</strong><span>DIGITAL SOLUTIONS</span></div>
         <div className="footerNav">
-          <a href="#ahc-kimdir">AHC Kimdir?</a><a href="#hizmetler">Hizmetler</a><a href="#projeler">Tamamlanan Projeler</a><a href="#iletisim">İletişim</a>
+          <a href="#hizmetler">AHC Kimdir?</a><a href="#projeler">Projeler</a><a href="#teknoloji">Teknoloji</a><a href="#iletisim">İletişim</a>
         </div>
         <a className="footerTop" href="#anasayfa">YUKARI DÖN <span>↑</span></a>
       </div>
