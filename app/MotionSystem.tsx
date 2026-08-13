@@ -16,24 +16,32 @@ export default function MotionSystem() {
       ".statement, .aboutHeader, .servicesShowcase, .projectOnlyTitle, .projectPortrait, .processIntro, .codeWorkspace, .contactTerminal, .contactCopy"
     );
 
+    const compactViewport = window.matchMedia("(max-width: 900px)").matches;
+
     revealTargets.forEach((el, index) => {
       el.classList.add("reveal");
       (el as HTMLElement).style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 70}ms`);
+      // Mobile'da uzun bolumleri IntersectionObserver oranina baglamiyoruz.
+      // Hizmetler vitrini telefonda birkac ekran boyu oldugu icin yuksek
+      // threshold bolumun kalici olarak gorunmez kalmasina neden olabiliyor.
+      if (compactViewport) el.classList.add("is-visible");
     });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.13, rootMargin: "0px 0px -7% 0px" }
-    );
+    const observer = compactViewport
+      ? null
+      : new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer?.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.04, rootMargin: "0px 0px -4% 0px" }
+        );
 
-    revealTargets.forEach((el) => observer.observe(el));
+    if (observer) revealTargets.forEach((el) => observer.observe(el));
 
     const hoverCards = document.querySelectorAll(".serviceCard, .pipelineCard, .portraitFrame");
     const onMove = (event: Event) => {
@@ -59,7 +67,7 @@ export default function MotionSystem() {
     window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
-      observer.disconnect();
+      observer?.disconnect();
       hoverCards.forEach((el) => el.removeEventListener("mousemove", onMove));
       window.removeEventListener("scroll", onScroll);
     };
