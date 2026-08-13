@@ -1,6 +1,7 @@
 import ContactTerminalForm from "./ContactTerminalForm";
 import MotionSystem from "./MotionSystem";
 import ServicesShowcase from "./ServicesShowcase";
+import AutoPlayVideo from "./AutoPlayVideo";
 
 const projects = [
   { title: "AHC Location", video: "/ahc-location.mp4" },
@@ -48,9 +49,7 @@ export default function Home() {
     </header>
 
     <section className="hero" id="anasayfa">
-      <video autoPlay muted loop playsInline preload="auto" className="heroVideo">
-        <source src="/ahc-hero.mp4" type="video/mp4" />
-      </video>
+      <AutoPlayVideo src="/ahc-hero.mp4" className="heroVideo" aria-label="AHC Digital Solutions tanıtım videosu" />
       <div className="heroTopFade"/><div className="heroBottomFade"/><div className="heroEdge"/>
       <a className="scrollCue" href="#ahc-kimdir"><small>KEŞFET</small><span>↓</span></a>
     </section>
@@ -92,17 +91,11 @@ export default function Home() {
               <div className="portraitGlow"/>
               <div className="portraitGrid"/>
               <div className="portraitScan"/>
-              <video
+              <AutoPlayVideo
                 className="portraitVideo"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
+                src={p.video}
                 aria-label={`${p.title} proje videosu`}
-              >
-                <source src={p.video} type="video/mp4" />
-              </video>
+              />
               <div className="portraitGlass"/>
             </div>
           </article>
