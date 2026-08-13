@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       "Özel yazılım, Android uygulamaları, web teknolojileri, yönetim sistemleri ve Google SEO çözümleri.",
     images: [
       {
-        url: "/og-whatsapp-v2.png",
+        url: "/og-whatsapp-final.png",
         width: 1200,
         height: 630,
         alt: "AHC Digital Solutions",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "AHC Digital Solutions | Dijital Ürün ve Yazılım Geliştirme",
     description:
       "Özel yazılım, Android uygulamaları, web teknolojileri, yönetim sistemleri ve Google SEO çözümleri.",
-    images: ["/og-whatsapp-v2.png"],
+    images: ["/og-whatsapp-final.png"],
   },
   robots: {
     index: true,
