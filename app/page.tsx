@@ -7,33 +7,6 @@ const projects = [
   { title: "AHC Auth", video: "/ahc-auth.mp4" },
 ];
 
-const processSteps = [
-  {
-    no: "01",
-    title: "Keşif",
-    code: "collect(requirements);",
-    text: "İhtiyacı, hedefi ve gerçek kullanım senaryosunu netleştiriyoruz.",
-  },
-  {
-    no: "02",
-    title: "Mimari",
-    code: "design(systemArchitecture);",
-    text: "Doğru teknoloji yapısını, veri akışını ve ürün iskeletini kuruyoruz.",
-  },
-  {
-    no: "03",
-    title: "Geliştirme",
-    code: "build(product);",
-    text: "Ürünü gerçek kullanım için geliştiriyor, test ediyor ve iyileştiriyoruz.",
-  },
-  {
-    no: "04",
-    title: "Yayın",
-    code: "deploy(production);",
-    text: "Son kontrolleri tamamlıyor, ürünü yayına alıyor ve sürdürüyoruz.",
-  },
-];
-
 export default function Home() {
   return <main><MotionSystem />
     <header className="navShell">
@@ -107,66 +80,6 @@ export default function Home() {
             </div>
           </article>
         )}
-      </div>
-    </section>
-
-    <section className="process processV5">
-      <div className="processIntro">
-        <p className="kicker"><span/> NASIL ÇALIŞIYORUZ</p>
-        <h2>Kod gibi.<br/><em>Net, izlenebilir, sistemli.</em></h2>
-        <p>Dört aşamalı çalışma düzenimiz, projenin ilk görüşmeden canlı yayına kadar kontrollü ve takip edilebilir ilerlemesini sağlar.</p>
-      </div>
-
-      <div className="codeWorkspace">
-        <div className="editorTop">
-          <div className="traffic"><span/><span/><span/></div>
-          <div className="editorPath">ahc://workflow/product_pipeline.ts</div>
-          <div className="editorState"><span/> ÇALIŞIYOR</div>
-        </div>
-
-        <div className="editorBody">
-          <div className="codeContent" aria-hidden="true">
-            <p><b className="pink">const</b> <b className="cyan">AHCWorkflow</b> = <span>{"{"}</span></p>
-            <p className="indent"><b className="blue">client</b>: <span className="string">"fikriniz"</span>,</p>
-            <p className="indent"><b className="blue">objective</b>: <span className="string">"çalışan dijital ürün"</span>,</p>
-            <p className="indent"><b className="blue">pipeline</b>: [</p>
-            <p className="indent2"><span className="function">discover</span>(),</p>
-            <p className="indent2"><span className="function">architect</span>(),</p>
-            <p className="indent2"><span className="function">develop</span>(),</p>
-            <p className="indent2"><span className="function">deploy</span>()</p>
-            <p className="indent">],</p>
-            <p className="indent"><b className="blue">status</b>: <span className="string">"yayina_hazir"</span></p>
-            <p><span>{"}"}</span>;</p>
-            <p>&nbsp;</p>
-            <p><span className="comment">// fikir → mimari → kod → canlı sistem</span></p>
-            <p><span className="function">run</span>(<b className="cyan">AHCWorkflow</b>); <span className="caret">▌</span></p>
-          </div>
-
-          <div className="runtimePanel">
-            <small>ÇALIŞMA DURUMU</small>
-            <strong>AHC ÇEKİRDEK</strong>
-            <div><span>DERLEME</span><b>HAZIR</b></div>
-            <div><span>GÜVENLİK</span><b>AKTİF</b></div>
-            <div><span>YAYIN</span><b>ÇEVRİMİÇİ</b></div>
-          </div>
-        </div>
-
-        <div className="pipeline">
-          <div className="pipelineLine"><i/></div>
-          {processSteps.map((step, idx) =>
-            <article className="pipelineStep" key={step.no}>
-              <div className="pipelineNode">
-                <i/>
-              </div>
-              <div className="pipelineCard">
-                <small>{step.code}</small>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </div>
-              {idx < processSteps.length - 1 && <div className="pipelinePulse"/>}
-            </article>
-          )}
-        </div>
       </div>
     </section>
 

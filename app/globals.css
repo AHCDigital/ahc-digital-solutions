@@ -1425,7 +1425,12 @@ html{scroll-behavior:smooth}
   .serviceDetailPage .detailCenteredTitle p{margin-left:auto;margin-right:auto}
 }
 
-/* V29 — preserve mobile section visibility without touching native video autoplay. */
-@media(max-width:900px){
-  .motion-ready .reveal{opacity:1!important;transform:none!important;filter:none!important}
+/* V30 — mobile video priority: keep service artwork visible but stop below-the-fold decorative loops. */
+@media (max-width:900px){
+  .servicesCodeRain .codeRainColumn,
+  .servicesCodeRain .codeRainGlow,
+  .serviceCard:before,
+  .serviceVisualScan,
+  .serviceVisualParticles i,
+  .masterReferenceImage{animation:none!important;}
 }
