@@ -33,7 +33,7 @@ const data = {
     ["Hassas Müdahale", "Mikroskop, ölçüm ekipmanları ve uygun rework teknikleriyle kontrollü işlem hedeflenir."],
     ["Şeffaf Süreç", "Cihazın durumu ve uygulanabilecek işlem, teknik değerlendirme sonrasında netleştirilir."],
     ["Kontrollü Teslim", "Onarım tamamlandığında ilgili fonksiyonlar yeniden test edilerek sonuç doğrulanır."]
-  ],
+  ] as [string, string][],
   gainsIntro: "Teknik serviste önemli olan hızlıca parça değiştirmek değil, cihazın gerçek arızasını doğru anlayıp mümkün olan en doğru müdahaleyi yapmaktır.",
   process: [
     ["Cihazı Dinliyoruz", "Arızanın nasıl başladığını, belirtileri ve daha önce işlem görüp görmediğini öğreniyoruz."],
@@ -43,7 +43,7 @@ const data = {
     ["Onarımı Uyguluyoruz", "Belirlenen işlem uygun ekipman ve kontrollü sıcaklık/işçilik koşullarıyla gerçekleştiriliyor."],
     ["Fonksiyonları Test Ediyoruz", "Onarımla ilişkili fonksiyonlar ve cihazın temel çalışma durumu tekrar kontrol ediliyor."],
     ["Teslime Hazırlıyoruz", "Son kontroller tamamlandıktan sonra cihaz yapılan işlemle birlikte teslim sürecine alınıyor."]
-  ],
+  ] as [string, string][],
   processIntro: "Tamir sürecini yazılım geliştirme gibi değil, gerçek teknik servis akışıyla yürütüyoruz: teşhis, ölçüm, müdahale, doğrulama ve teslim.",
   systemEyebrow: "MİKRO ELEKTRONİK ONARIM",
   systemTitle: "Parça değişiminden fazlası.",
@@ -57,7 +57,7 @@ const data = {
     ["Hassas İşçilik", "Anakart ve küçük bileşen işlemlerinde uygun ekipmanla kontrollü çalışma yapılır."],
     ["Parça & Uygunluk", "Değişim gereken durumlarda cihazla uyumlu parça ve doğru montaj süreci esas alınır."],
     ["Son Kontrol", "İşlem sonrasında ilgili fonksiyonlar yeniden kontrol edilerek onarım sonucu doğrulanır."]
-  ],
+  ] as [string, string][],
   ctaTitle: "Cihazınızdaki arızayı birlikte değerlendirelim."
 };
 
