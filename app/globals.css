@@ -1425,47 +1425,7 @@ html{scroll-behavior:smooth}
   .serviceDetailPage .detailCenteredTitle p{margin-left:auto;margin-right:auto}
 }
 
-/* V27 — mobile visibility + native video overlay cleanup */
-.heroVideo,.portraitVideo{pointer-events:none}
-.heroVideo::-webkit-media-controls,
-.heroVideo::-webkit-media-controls-panel,
-.heroVideo::-webkit-media-controls-play-button,
-.heroVideo::-webkit-media-controls-start-playback-button,
-.portraitVideo::-webkit-media-controls,
-.portraitVideo::-webkit-media-controls-panel,
-.portraitVideo::-webkit-media-controls-play-button,
-.portraitVideo::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none!important;opacity:0!important}
+/* V29 — preserve mobile section visibility without touching native video autoplay. */
 @media(max-width:900px){
   .motion-ready .reveal{opacity:1!important;transform:none!important;filter:none!important}
-}
-
-/* V28 — reliable mobile autoplay for hero + project films */
-.heroVideo,.portraitVideo{
-  -webkit-user-select:none;
-  user-select:none;
-  -webkit-touch-callout:none;
-}
-.heroVideo[controls],.portraitVideo[controls]{display:block}
-@media(max-width:900px){
-  .heroVideo,.portraitVideo{
-    pointer-events:none!important;
-    -webkit-appearance:none!important;
-  }
-  .heroVideo::-webkit-media-controls,
-  .heroVideo::-webkit-media-controls-enclosure,
-  .heroVideo::-webkit-media-controls-panel,
-  .heroVideo::-webkit-media-controls-overlay-play-button,
-  .heroVideo::-webkit-media-controls-play-button,
-  .heroVideo::-webkit-media-controls-start-playback-button,
-  .portraitVideo::-webkit-media-controls,
-  .portraitVideo::-webkit-media-controls-enclosure,
-  .portraitVideo::-webkit-media-controls-panel,
-  .portraitVideo::-webkit-media-controls-overlay-play-button,
-  .portraitVideo::-webkit-media-controls-play-button,
-  .portraitVideo::-webkit-media-controls-start-playback-button{
-    display:none!important;
-    opacity:0!important;
-    visibility:hidden!important;
-    -webkit-appearance:none!important;
-  }
 }
