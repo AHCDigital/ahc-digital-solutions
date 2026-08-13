@@ -77,6 +77,7 @@
 .aboutAura{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none}.aboutAuraOne{width:520px;height:520px;right:-180px;top:40px;background:rgba(52,191,226,.075)}.aboutAuraTwo{width:460px;height:460px;left:-200px;bottom:20px;background:rgba(120,70,229,.07)}
 .aboutHeader{position:relative;z-index:2;display:grid;grid-template-columns:minmax(310px,.85fr) minmax(420px,1.15fr);gap:90px;align-items:end;margin-bottom:70px}
 .aboutHeader h2{margin:0;font-size:clamp(58px,6vw,92px);line-height:.92;letter-spacing:-.065em;font-weight:540}.aboutHeader h2 em{display:block;margin-top:10px;font-style:normal;background:linear-gradient(90deg,var(--cyan),#6ca8ff 45%,var(--violet));-webkit-background-clip:text;color:transparent}
+.aboutLogoWrap{display:flex;align-items:center;justify-content:flex-start;min-height:300px}.aboutOfficialLogo{display:block;width:clamp(235px,22vw,330px);height:auto;aspect-ratio:1/1;object-fit:cover;clip-path:circle(46.2% at 50% 50%);filter:drop-shadow(0 0 24px rgba(36,180,255,.16));}
 .aboutManifesto{max-width:650px;padding:0 0 6px 30px;border-left:1px solid rgba(79,196,235,.18)}.manifestoCode{display:block;margin-bottom:22px;color:#5c779b;font-family:"SFMono-Regular",Consolas,monospace;font-size:9px;letter-spacing:.14em}.aboutManifesto p{margin:0 0 14px;color:#91a0b8;font-size:13px;line-height:1.85}.aboutManifesto p:first-of-type{color:#c2cedf;font-size:15px}
 .capabilityConsole{position:relative;z-index:2;overflow:hidden;border:1px solid rgba(95,183,255,.16);border-radius:25px;background:linear-gradient(145deg,rgba(8,16,31,.90),rgba(3,6,14,.96));box-shadow:0 35px 120px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.04)}
 .capabilityConsole:before{content:"";position:absolute;width:560px;height:400px;right:-160px;top:-220px;border-radius:50%;background:radial-gradient(circle,rgba(48,207,232,.11),rgba(112,68,226,.07) 42%,transparent 70%);filter:blur(25px)}
@@ -112,7 +113,7 @@
 .contactCopy{position:relative;z-index:2}.contactCopy h2{margin:0;font-size:clamp(54px,5.4vw,84px);line-height:.98;letter-spacing:-.058em;font-weight:540}.contactCopy h2 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),#76a9ff 48%,var(--violet));-webkit-background-clip:text;color:transparent}.contactCopy>p:last-of-type{max-width:610px;margin:27px 0 32px;color:#8595ad;font-size:13px;line-height:1.85}
 .contactActions{display:flex;align-items:center;gap:25px;flex-wrap:wrap}.primaryContact{display:inline-flex;align-items:center;gap:18px;padding:16px 20px;border:1px solid rgba(70,208,235,.24);border-radius:10px;background:linear-gradient(135deg,rgba(35,180,211,.10),rgba(107,71,220,.08));color:#cbe9f4;text-decoration:none;font-size:8px;letter-spacing:.14em}.primaryContact span{color:var(--cyan);font-size:14px}.contactMail{color:#5f718c;font-family:"SFMono-Regular",Consolas,monospace;font-size:9px}
 .footerV7{padding:0 max(28px,calc((100vw - 1440px)/2)) 28px;background:#02040a;border-top:1px solid rgba(89,163,232,.07)}
-.footerMain{min-height:120px;display:grid;grid-template-columns:1fr auto 1fr;gap:35px;align-items:center}.footerBrand{display:flex;align-items:baseline;gap:12px}.footerBrand strong{color:#d9f6ff;font-size:25px;letter-spacing:-.04em}.footerBrand span{color:#51637d;font-size:7px;letter-spacing:.19em}.footerNav{display:flex;gap:30px}.footerNav a,.footerTop{color:#667993;text-decoration:none;font-size:8px;letter-spacing:.09em}.footerTop{justify-self:end;display:flex;gap:12px}.footerTop span{color:var(--cyan)}
+.footerMain{min-height:120px;display:grid;grid-template-columns:1fr auto 1fr;gap:35px;align-items:center}.footerBrand{display:flex;align-items:center;justify-content:flex-start}.footerOfficialLogo{display:block;width:76px;height:76px;object-fit:cover;clip-path:circle(46.2% at 50% 50%);filter:drop-shadow(0 0 12px rgba(36,180,255,.12))}.footerNav{display:flex;gap:30px}.footerNav a,.footerTop{color:#667993;text-decoration:none;font-size:8px;letter-spacing:.09em}.footerTop{justify-self:end;display:flex;gap:12px}.footerTop span{color:var(--cyan)}
 .footerLine{height:1px;background:linear-gradient(90deg,transparent,rgba(53,230,242,.16),rgba(138,92,255,.16),transparent)}.footerBottom{min-height:65px;display:flex;align-items:end;justify-content:space-between;gap:25px;color:#394a63;font-size:7px;letter-spacing:.08em}.footerBottom p{margin:0}.footerBottom span{text-align:right}
 @media(max-width:900px){.contactV7{grid-template-columns:1fr;gap:55px}.contactTerminal{max-width:650px}.footerMain{grid-template-columns:1fr;gap:24px;padding:35px 0}.footerNav{flex-wrap:wrap}.footerTop{justify-self:start}.footerBottom{align-items:center;padding-top:22px}}
 @media(max-width:600px){.contactV7{padding-top:95px;padding-bottom:95px;min-height:auto}.contactTerminalBody{min-height:210px;padding:35px 23px}.contactTerminalTop i{display:none}.contactCopy h2{font-size:49px}.contactActions{align-items:flex-start;flex-direction:column;gap:16px}.footerNav{gap:17px 22px}.footerBottom{flex-direction:column;align-items:flex-start}.footerBottom span{text-align:left}}
@@ -1424,3 +1425,46 @@ html{scroll-behavior:smooth}
   .serviceDetailPage .detailCenteredTitle{text-align:center}
   .serviceDetailPage .detailCenteredTitle p{margin-left:auto;margin-right:auto}
 }
+
+
+/* V34 — official logo placement only */
+@media(max-width:1000px){.aboutLogoWrap{justify-content:center;min-height:auto}.aboutOfficialLogo{width:min(300px,64vw)}}
+@media(max-width:600px){.aboutOfficialLogo{width:min(250px,72vw)}.footerOfficialLogo{width:68px;height:68px}}
+
+/* ===== V35 — logo transparency + precise alignment only ===== */
+.aboutHeader{align-items:center}
+.aboutLogoWrap{min-height:0;align-items:center;justify-content:flex-start}
+.aboutOfficialLogo{
+  display:block;
+  width:clamp(190px,18vw,245px);
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  clip-path:none;
+  background:transparent;
+  filter:drop-shadow(0 0 22px rgba(36,180,255,.16));
+}
+.footerOfficialLogo{
+  display:block;
+  width:58px;
+  height:auto;
+  object-fit:contain;
+  clip-path:none;
+  background:transparent;
+  filter:drop-shadow(0 0 10px rgba(36,180,255,.12));
+}
+@media(max-width:1000px){
+  .aboutLogoWrap{justify-content:center}
+  .aboutOfficialLogo{width:min(225px,56vw)}
+}
+@media(max-width:600px){
+  .aboutOfficialLogo{width:min(200px,58vw)}
+  .footerOfficialLogo{width:52px;height:auto}
+}
+
+
+/* ===== V36 — footer logo aligned directly above copyright only ===== */
+.footerLegal{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:10px;width:max-content;max-width:100%}
+.footerLegal .footerOfficialLogo{margin:0 auto}
+.footerLegal p{text-align:center}
+@media(max-width:600px){.footerLegal{align-items:center}.footerLegal p{text-align:center}}

@@ -31,9 +31,8 @@ export default function Home() {
     <section className="aboutAHC" id="ahc-kimdir">
       <div className="aboutAura aboutAuraOne"/><div className="aboutAura aboutAuraTwo"/>
       <div className="aboutHeader">
-        <div>
-          <p className="kicker"><span/> AHC DIGITAL SOLUTIONS</p>
-          <h2>AHC <em>Kimdir?</em></h2>
+        <div className="aboutLogoWrap">
+          <img className="aboutOfficialLogo" src="/ahc-official-logo.png" alt="AHC Digital Solutions" />
         </div>
         <div className="aboutManifesto">
           <span className="manifestoCode">{"<"}AHC / DIGITAL SOLUTIONS{">"}</span>
@@ -115,14 +114,14 @@ export default function Home() {
 
     <footer className="footerV7">
       <div className="footerMain">
-        <div className="footerBrand"><strong>AHC</strong><span>DIGITAL SOLUTIONS</span></div>
+        <div className="footerBrand" aria-hidden="true"></div>
         <div className="footerNav">
           <a href="#ahc-kimdir">AHC Kimdir?</a><a href="#hizmetler">Hizmetler</a><a href="#projeler">Tamamlanan Projeler</a><a href="#iletisim">İletişim</a>
         </div>
         <a className="footerTop" href="#anasayfa">YUKARI DÖN <span>↑</span></a>
       </div>
       <div className="footerLine"/>
-      <div className="footerBottom"><p>© 2026 AHC Digital Solutions. Tüm hakları saklıdır.</p><span>Türkiye · Dijital ürün ve yazılım geliştirme</span></div>
+      <div className="footerBottom"><div className="footerLegal"><img className="footerOfficialLogo" src="/ahc-official-logo.png" alt="AHC Digital Solutions" /><p>© 2026 AHC Digital Solutions. Tüm hakları saklıdır.</p></div><span>Türkiye · Dijital ürün ve yazılım geliştirme</span></div>
     </footer>
   </main>
 }
