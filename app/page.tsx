@@ -21,9 +21,7 @@ export default function Home() {
     </header>
 
     <section className="hero" id="anasayfa">
-      <video autoPlay muted loop playsInline preload="auto" className="heroVideo" aria-label="AHC Digital Solutions tanıtım videosu">
-        <source src="/ahc-hero.mp4" type="video/mp4" />
-      </video>
+      <video src="/ahc-hero.mp4" poster="/ahc-hero-poster.jpg" autoPlay muted loop playsInline preload="auto" className="heroVideo" aria-label="AHC Digital Solutions tanıtım videosu" />
       <div className="heroTopFade"/><div className="heroBottomFade"/><div className="heroEdge"/>
       <a className="scrollCue" href="#ahc-kimdir"><small>KEŞFET</small><span>↓</span></a>
     </section>
@@ -67,15 +65,15 @@ export default function Home() {
               <div className="portraitScan"/>
               <video
                 className="portraitVideo"
+                src={p.video}
+                poster={p.title === "AHC Location" ? "/ahc-location-poster.jpg" : "/ahc-auth-poster.jpg"}
                 autoPlay
                 muted
                 loop
                 playsInline
                 preload="metadata"
                 aria-label={`${p.title} proje videosu`}
-              >
-                <source src={p.video} type="video/mp4" />
-              </video>
+              />
               <div className="portraitGlass"/>
             </div>
           </article>
